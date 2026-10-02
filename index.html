@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Innovación Ganadera · Cercados eléctricos, básculas y energía solar</title>
+<link rel="icon" href="assets/Logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="css/all.min.css">
+<style>
+:root{--bg:#1c1c1e;--bg2:#252528;--ink:#f3f3f1;--mute:#a9a9ad;--line:#38383c;--accent:#ff8000;--blue:#2196f3}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+html,body{overflow-x:hidden}
+img{max-width:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Montserrat","Segoe UI","Helvetica Neue",Arial,sans-serif;line-height:1.55}
+h1,h2,h3,.brand,.btn,.cat,.menu{font-family:"Montserrat","Arial Black","Segoe UI",Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+.top{position:sticky;top:0;z-index:5;background:rgba(28,28,30,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:68px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;min-width:0;letter-spacing:-.2px}
+.brand span{white-space:nowrap}
+.brand img{height:42px;width:42px;object-fit:contain;background:none}
+.menu{display:flex;gap:20px;font-size:.95rem;color:var(--mute)}
+.menu a:hover{color:var(--ink)}
+.btn{display:inline-block;letter-spacing:.2px;background:var(--accent);color:#1c1c1e;padding:11px 22px;border-radius:999px;font-weight:700;border:0;cursor:pointer;font:inherit;font-weight:700}
+.btn.blue{background:var(--blue);color:#fff}.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.hero{position:relative;overflow:hidden;min-height:78vh;display:flex;align-items:center;background:#1c1c1e url(assets/hero-poster.jpg) center/cover}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% center;z-index:0}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(28,28,30,.82) 0%,rgba(28,28,30,.45) 45%,rgba(28,28,30,.08) 100%)}
+.hero-content{position:relative;z-index:2}
+.hero h1,.hero p{text-shadow:0 2px 14px rgba(0,0,0,.55)}
+.hero h1{font-size:clamp(2.2rem,5.8vw,4.4rem);line-height:1.02;margin:0 0 18px;max-width:14ch;font-weight:900;letter-spacing:-1.5px;text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{color:#ececee;font-size:1.12rem;font-weight:500;max-width:46ch;margin:0 0 26px}
+section{padding:68px 0}
+h2{font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.12;margin:0 0 10px;font-weight:900;letter-spacing:-.5px}
+.sub{color:var(--mute);margin:0 0 30px;max-width:62ch}
+.cats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.cat{border:1px solid var(--line);background:var(--bg2);border-radius:16px;padding:18px;font-weight:700;cursor:pointer;color:var(--ink);font:inherit;font-weight:700;text-align:left;min-height:96px;display:flex;align-items:flex-end;transition:border-color .2s}
+.cat:hover,.cat[aria-pressed=true]{border-color:var(--accent)}
+.cat[aria-pressed=true]{background:#ff800022}
+.group{margin:36px 0 12px;font-size:1.25rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#fff;cursor:zoom-in}
+.card .b{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{margin:0;font-size:1rem;line-height:1.25}
+.card p{margin:0;color:var(--mute);font-size:.88rem}
+.price{color:var(--accent);font-weight:800;font-size:1.1rem;margin-top:auto}
+.ask{color:var(--blue);font-weight:700;font-size:.9rem;margin-top:auto}
+.about{background:var(--bg2)}
+.about p{color:#d0d0d3;max-width:78ch}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px;border-top:1px solid var(--line);padding-top:26px}
+.stats strong{font-size:2.4rem;color:var(--accent);display:block;line-height:1}.stats span{color:var(--mute)}
+footer{background:#111;padding:56px 0}
+footer h2{text-align:center;text-transform:uppercase;letter-spacing:1px;font-size:clamp(1.9rem,4.5vw,3rem);margin:0}
+.fsub{text-align:center;color:var(--mute);margin:8px 0 34px;font-weight:500}
+.fc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.fcard{display:flex;align-items:center;gap:16px;background:#1b1b1d;border:1px solid #2e2e32;border-radius:18px;padding:16px 18px;text-align:left;transition:border-color .2s,transform .2s;min-width:0}
+a.fcard:hover{border-color:var(--accent);transform:translateY(-2px)}
+.fcard .ic{flex:0 0 52px;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff}
+.fcard .ic svg{width:26px;height:26px;fill:currentColor;display:block}
+.fcard small{display:block;color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:1.2px;font-size:.72rem;margin-bottom:3px}
+.fcard b,.fcard div>a{display:block;font-weight:800;font-size:1.02rem;line-height:1.35;overflow-wrap:anywhere}
+.fcard div{min-width:0}
+.fcard div>a:hover{color:var(--accent)}
+.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:6;display:flex;flex-direction:column;gap:10px}
+.fab a{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.45);border:2px solid rgba(255,255,255,.9);transition:transform .15s}
+.fab a:hover{transform:scale(1.08)}
+.fab a svg{width:28px;height:28px;fill:currentColor;display:block}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:20;align-items:center;justify-content:center;padding:18px}
+.modal.on{display:flex}
+.modal form,.toast{background:#fff;color:#222;border-radius:16px;padding:26px 20px;width:min(380px,100%);display:flex;flex-direction:column;gap:10px;position:relative}
+.modal input,.modal textarea{padding:10px;border-radius:8px;border:1px solid #ccc;font:inherit}
+.modal h3{margin:0 0 4px;color:var(--blue);text-align:center}
+.x{position:absolute;top:8px;right:16px;font-size:1.8rem;cursor:pointer;color:#888;background:none;border:0}
+#lb img{max-width:94vw;max-height:90vh;border-radius:10px}
+.toast{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:30;text-align:center;align-items:center}
+@media (max-width:900px){.cats{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr}}
+@media (max-width:900px){html{scroll-padding-top:112px}.top .wrap{flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:8px;row-gap:6px}
+ .menu{display:flex;order:3;width:100%;justify-content:space-between;font-size:.88rem;border-top:1px solid var(--line);padding-top:8px}}
+@media (max-width:600px){
+ .wrap{padding:0 16px}
+ .brand img{height:36px;width:36px}.brand span{font-size:1.02rem}
+ .btn{padding:10px 18px;font-size:.95rem}
+ .hero{min-height:72svh;align-items:flex-end;padding-bottom:34px}
+ .hero-video{object-position:58% center}
+ .hero::before{background:linear-gradient(180deg,rgba(28,28,30,.05) 0%,rgba(28,28,30,.15) 40%,rgba(28,28,30,.78) 100%)}
+ .hero h1{font-size:2.05rem;max-width:none}.hero p{font-size:1rem}
+ section{padding:44px 0}
+ .cats{grid-template-columns:1fr 1fr;gap:10px}.cat{min-height:74px;padding:14px;font-size:.95rem}
+ .cat:last-child{grid-column:1/-1}
+ .group{font-size:1.1rem;margin-top:28px}
+ .grid{grid-template-columns:1fr 1fr;gap:10px}
+ .card .b{padding:10px;gap:4px}.card h3{font-size:.9rem}.card p{font-size:.78rem}.price{font-size:1rem}.ask{font-size:.82rem}
+ .stats strong{font-size:2rem}
+ footer{padding:40px 0 96px}.fc{grid-template-columns:1fr}.fcard{padding:14px}.fcard .ic{flex-basis:46px;width:46px;height:46px}.fcard .ic svg{width:23px;height:23px}.fcard b,.fcard div>a{font-size:.95rem}
+ .fab{right:12px}.fab a{width:50px;height:50px}.fab a svg{width:25px;height:25px}
+ .modal form{padding:22px 16px}
+}
+@media (max-width:360px){.grid{grid-template-columns:1fr}.brand span{font-size:.92rem}}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-video{display:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#" id="home" aria-label="Ir al inicio"><img src="assets/Logo-blanco.png" alt="Logo Innovación Ganadera"><span>Innovación Ganadera</span></a>
+  <nav class="menu"><a href="#catalogo">Productos</a><a href="#nosotros">Sobre nosotros</a><a href="#contacto">Contacto</a></nav>
+  <div><button class="btn blue" id="pqr" type="button">PQR</button></div>
+</div></header>
+
+<div class="hero">
+  <video class="hero-video" id="hv" autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.jpg" aria-hidden="true">
+    <source src="assets/hero-movil.mp4" type="video/mp4" media="(max-width:700px)">
+    <source src="assets/hero.mp4" type="video/mp4">
+  </video>
+  <div class="wrap hero-content">
+  <h1>Bienvenido a <em>Innovación Ganadera</em></h1>
+  <p>Ofrecemos productos de calidad para el sector ganadero. Selecciona una categoría para ver nuestros productos.</p>
+  <a class="btn" href="#catalogo">Ver productos</a>
+</div></div>
+
+<section id="catalogo"><div class="wrap">
+  <h2>Nuestros productos</h2>
+  <p class="sub">Impulsores, básculas, energía solar y accesorios para tu finca.</p>
+  <div class="cats" id="cats"></div>
+  <div id="out"></div>
+</div></section>
+
+<section class="about" id="nosotros"><div class="wrap">
+  <h2>Sobre nosotros</h2>
+  <p>Innovación Ganadera es una empresa con más de 15 años de experiencia al servicio del sector agropecuario colombiano. Nos especializamos en el diseño, fabricación e implementación de soluciones tecnológicas en cercados eléctricos y sistemas de pesaje para ganadería, orientadas a mejorar la eficiencia, seguridad y productividad en el manejo del ganado.</p>
+  <p>Además, contamos con una línea enfocada en energía solar, ofreciendo sistemas sostenibles para el bombeo de agua en fincas, sistemas rurales y soluciones de energía solar para viviendas, adaptadas a las necesidades del campo y contribuyendo al desarrollo sostenible.</p>
+  <p>Nuestro compromiso es brindar productos confiables, duraderos y de alta calidad, acompañados de asesoría técnica especializada, con el propósito de impulsar la modernización del campo colombiano.</p>
+  <div class="stats">
+    <div><strong>+15 años</strong><span>de experiencia en el sector agropecuario</span></div>
+    <div><strong>26</strong><span>proyectos en nuestra galería</span></div>
+    <div><strong>Asesoría</strong><span>técnica especializada</span></div>
+  </div>
+</div></section>
+
+<footer id="contacto"><div class="wrap">
+  <h2>Contáctanos</h2>
+  <p class="fsub">Escríbenos o llámanos, con gusto te asesoramos.</p>
+  <div class="fc">
+    <div class="fcard"><span class="ic" style="background:#ff8000"><svg viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M165 25Q159 10 146 4Q132 -2 117 1L29 25Q2 35 0 64Q1 189 61 290Q121 391 222 451Q323 511 448 512Q477 510 487 483L511 395Q514 380 508 366Q502 353 487 347L391 307Q364 298 345 319L305 368Q252 343 210 302Q169 260 144 207L193 167Q214 148 205 121L165 25Z"/></svg></span><div><small>Teléfonos</small><a href="tel:3186615026">318 661 5026</a><a href="tel:3004107094">300 410 7094</a></div></div>
+    <a class="fcard" href="https://www.instagram.com/innovacion_ganadera" target="_blank" rel="noopener"><span class="ic" style="background:radial-gradient(circle at 30% 107%,#fdf497 0,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%)"><svg viewBox="0 0 448 448" aria-hidden="true" focusable="false"><path d="M224 109Q175 110 143 143Q110 175 109 224Q110 273 143 305Q175 338 224 339Q273 338 305 305Q338 273 339 224Q338 175 305 143Q273 110 224 109ZM224 299Q192 298 171 277Q150 256 149 224Q150 192 171 171Q192 150 224 149Q256 150 277 171Q298 192 299 224Q298 256 277 277Q256 298 224 299ZM371 104Q368 129 344 131Q319 129 317 104Q317 93 325 85Q332 78 344 78Q355 78 363 85Q370 93 371 104ZM447 132Q447 77 410 38Q371 1 317 1Q297 0 260 0Q224 0 188 0Q151 0 132 1Q78 1 38 38Q1 77 2 131Q0 151 0 188Q0 224 0 260Q0 296 2 316Q1 371 38 410Q77 447 132 446Q151 447 188 448Q224 448 260 448Q297 447 317 446Q371 447 410 410Q447 371 447 316Q448 296 448 260Q448 224 448 188Q448 151 447 131ZM399 356Q386 386 356 399Q336 406 302 407Q268 408 240 408Q231 408 224 408Q217 408 208 408Q180 408 146 407Q113 406 92 399Q62 386 49 356Q42 335 41 302Q40 268 40 240Q40 231 40 224Q40 217 40 208Q40 180 41 146Q42 112 49 92Q62 62 92 49Q113 42 146 41Q180 39 208 40Q217 40 224 40Q231 40 240 40Q268 40 302 41Q336 42 356 49Q386 62 399 92Q406 112 407 146Q409 180 408 208Q408 217 408 224Q408 231 408 240Q409 268 407 302Q406 336 399 356Z"/></svg></span><div><small>Instagram</small><b>@innovacion_ganadera</b></div></a>
+    <a class="fcard" href="http://www.youtube.com/@innovacionganaderasas" target="_blank" rel="noopener"><span class="ic" style="background:#ff0000"><svg viewBox="0 0 546 384" aria-hidden="true" focusable="false"><path d="M535 60Q523 23 486 11Q462 6 412 3Q362 1 319 0Q276 0 273 0Q270 0 227 0Q184 1 134 3Q84 6 60 11Q23 23 11 60Q6 83 3 113Q1 144 0 168Q0 191 0 192Q0 194 0 217Q1 241 3 271Q6 302 11 325Q23 362 60 373Q84 378 134 381Q184 383 227 384Q270 384 273 384Q273 384 273 384Q276 384 319 384Q362 383 412 381Q462 378 486 373Q523 362 535 325Q540 302 543 271Q545 241 546 217Q546 194 546 192Q546 191 546 168Q545 144 543 113Q540 83 535 60ZM217 274V111V274V111L360 192L217 274Z"/></svg></span><div><small>YouTube</small><b>@innovacionganaderasas</b></div></a>
+    <a class="fcard" href="https://wa.me/573186615026" target="_blank" rel="noopener"><span class="ic" style="background:#25d366"><svg viewBox="0 0 448 448" aria-hidden="true" focusable="false"><path d="M381 65Q315 1 224 0Q162 1 112 30Q62 60 32 110Q3 160 2 222Q2 282 31 333L0 448L118 417Q167 444 224 444Q286 443 336 414Q387 384 417 334Q447 284 448 222Q448 177 430 137Q413 97 381 65ZM224 407Q173 406 130 381L123 377L53 395L72 327L68 320Q40 275 39 222Q41 144 94 92Q146 39 224 38Q300 38 354 92Q409 146 411 222Q408 300 355 353Q302 405 224 407ZM325 269Q320 266 306 259Q292 253 287 251Q280 246 275 253Q271 258 266 265Q260 272 257 275Q253 281 245 276Q221 265 203 251Q185 237 170 210Q166 204 173 198Q178 194 186 180Q188 175 185 170Q184 169 181 160Q178 152 174 142Q170 134 168 129Q162 117 157 120Q156 120 156 120Q151 120 145 120Q139 119 130 126Q130 127 129 128Q124 132 118 143Q112 154 111 173Q112 193 121 210Q130 226 133 230Q133 230 134 230Q134 231 135 232Q140 241 165 268Q189 295 228 314Q254 325 268 328Q283 330 295 328Q304 326 316 319Q328 312 332 302Q339 280 336 275Q334 272 328 270Q326 269 325 269Z"/></svg></span><div><small>WhatsApp</small><b>318 661 5026</b></div></a>
+    <a class="fcard" href="mailto:innoganservicio@hotmail.com"><span class="ic" style="background:#2196f3"><svg viewBox="0 0 512 384" aria-hidden="true" focusable="false"><path d="M48 0Q28 1 14 14Q1 28 0 48Q1 72 19 86L237 250Q256 262 275 250L493 86Q511 72 512 48Q511 28 498 14Q484 1 464 0H48ZM0 112V320V112V320Q1 347 19 365Q37 383 64 384H448Q475 383 493 365Q511 347 512 320V112L294 275Q277 288 256 288Q235 288 218 275L0 112Z"/></svg></span><div><small>Correo</small><b>innoganservicio@hotmail.com</b></div></a>
+    <a class="fcard" href="https://www.google.com/maps/search/?api=1&query=Cra+80%23100c-12+doce+de+octubre" target="_blank" rel="noopener"><span class="ic" style="background:#ea4335"><svg viewBox="0 0 384 511" aria-hidden="true" focusable="false"><path d="M216 499Q243 466 282 410Q321 355 352 296Q382 237 384 192Q382 110 328 56Q274 2 192 0Q110 2 56 56Q2 110 0 192Q2 237 32 296Q63 355 102 410Q141 466 168 499Q178 511 192 511Q206 511 216 499ZM192 128Q228 129 247 160Q265 192 247 224Q228 255 192 256Q156 255 137 224Q119 192 137 160Q156 129 192 128Z"/></svg></span><div><small>Ubicación</small><b>Cra 80#100c-12 doce de octubre</b></div></a>
+  </div>
+</div></footer>
+
+<div class="fab">
+  <a href="https://wa.me/573186615026" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp" style="background:#25d366"><svg viewBox="0 0 448 448" aria-hidden="true" focusable="false"><path d="M381 65Q315 1 224 0Q162 1 112 30Q62 60 32 110Q3 160 2 222Q2 282 31 333L0 448L118 417Q167 444 224 444Q286 443 336 414Q387 384 417 334Q447 284 448 222Q448 177 430 137Q413 97 381 65ZM224 407Q173 406 130 381L123 377L53 395L72 327L68 320Q40 275 39 222Q41 144 94 92Q146 39 224 38Q300 38 354 92Q409 146 411 222Q408 300 355 353Q302 405 224 407ZM325 269Q320 266 306 259Q292 253 287 251Q280 246 275 253Q271 258 266 265Q260 272 257 275Q253 281 245 276Q221 265 203 251Q185 237 170 210Q166 204 173 198Q178 194 186 180Q188 175 185 170Q184 169 181 160Q178 152 174 142Q170 134 168 129Q162 117 157 120Q156 120 156 120Q151 120 145 120Q139 119 130 126Q130 127 129 128Q124 132 118 143Q112 154 111 173Q112 193 121 210Q130 226 133 230Q133 230 134 230Q134 231 135 232Q140 241 165 268Q189 295 228 314Q254 325 268 328Q283 330 295 328Q304 326 316 319Q328 312 332 302Q339 280 336 275Q334 272 328 270Q326 269 325 269Z"/></svg></a>
+  <a href="https://www.instagram.com/innovacion_ganadera" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram" style="background:radial-gradient(circle at 30% 107%,#fdf497 0,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%)"><svg viewBox="0 0 448 448" aria-hidden="true" focusable="false"><path d="M224 109Q175 110 143 143Q110 175 109 224Q110 273 143 305Q175 338 224 339Q273 338 305 305Q338 273 339 224Q338 175 305 143Q273 110 224 109ZM224 299Q192 298 171 277Q150 256 149 224Q150 192 171 171Q192 150 224 149Q256 150 277 171Q298 192 299 224Q298 256 277 277Q256 298 224 299ZM371 104Q368 129 344 131Q319 129 317 104Q317 93 325 85Q332 78 344 78Q355 78 363 85Q370 93 371 104ZM447 132Q447 77 410 38Q371 1 317 1Q297 0 260 0Q224 0 188 0Q151 0 132 1Q78 1 38 38Q1 77 2 131Q0 151 0 188Q0 224 0 260Q0 296 2 316Q1 371 38 410Q77 447 132 446Q151 447 188 448Q224 448 260 448Q297 447 317 446Q371 447 410 410Q447 371 447 316Q448 296 448 260Q448 224 448 188Q448 151 447 131ZM399 356Q386 386 356 399Q336 406 302 407Q268 408 240 408Q231 408 224 408Q217 408 208 408Q180 408 146 407Q113 406 92 399Q62 386 49 356Q42 335 41 302Q40 268 40 240Q40 231 40 224Q40 217 40 208Q40 180 41 146Q42 112 49 92Q62 62 92 49Q113 42 146 41Q180 39 208 40Q217 40 224 40Q231 40 240 40Q268 40 302 41Q336 42 356 49Q386 62 399 92Q406 112 407 146Q409 180 408 208Q408 217 408 224Q408 231 408 240Q409 268 407 302Q406 336 399 356Z"/></svg></a>
+</div>
+
+<div class="modal" id="mp"><form id="fp">
+  <button class="x" type="button" id="cp" aria-label="Cerrar">&times;</button>
+  <h3>Quejas, Reclamos y Sugerencias</h3>
+  <input name="name" placeholder="Nombre" required>
+  <input name="email" type="email" placeholder="Correo" required>
+  <input name="telefono" placeholder="Teléfono" required>
+  <input name="asunto" placeholder="Asunto" required>
+  <textarea name="mensaje" placeholder="Mensaje" required rows="3"></textarea>
+  <button class="btn blue" type="submit">Enviar</button>
+</form></div>
+<div class="modal" id="lb"><img alt=""></div>
+<div class="toast" id="ts"><h3 style="color:#2196f3;margin:0 0 6px">¡Mensaje enviado con éxito!</h3><p style="margin:0">Gracias por contactarnos. Te responderemos pronto.</p></div>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+var A="assets/";
+var P=function(n,i,pr,d){return{n:n,i:i,p:pr,d:d}};
+var D={
+impulsores:[
+ {t:"Impulsores Speed Fence · Corriente 110V",s:"Elige el modelo que más se ajuste a tus necesidades. Todos incluyen IVA.",l:[
+  ["10 KM",389213],["30 KM",398926],["50 KM",406718],["80 KM",473106],["100 KM",642360],["120 KM",748776],["150 KM",879328],["180 KM",988237],["200 KM",1600000]
+ ].map(function(x){return P("Energizador SpeedEnergy · "+x[0],"speedfence.jpg",x[1],"Marca: Speed Fence")})},
+ {t:"Impulsores Speed Fence · Corriente 12V",s:"Elige el modelo que más se ajuste a tus necesidades. Todos incluyen IVA.",l:[
+  ["10 KM",503101],["30 KM",509612],["50 KM",515270],["80 KM",541742],["100 KM",869583],["120 KM",976232],["150 KM",1110726],["180 KM",1216231],["200 KM",1980000]
+ ].map(function(x){return P("Energizador Speed Fence · "+x[0],"speedfence12v.jpg",x[1],"Marca: Speed Fence")})}],
+basculas:[{t:"Básculas ganaderas",s:"Soluciones robustas y precisas para el pesaje de ganado.",l:[
+ P("Báscula","bascula.jpg",0,"Barra IG 8000 con capacidad de 3000 kg. 100% acero inoxidable. Garantía de 10 años."),
+ P("S3","s3_nueva.jpg",0,"Robusto, resistente al agua y totalmente portátil, lo que le permite medir rápidamente pesos vivos precisos."),
+ P("EziWeigh7i","eziweigh7i.jpg",0,"Muestra el aumento de peso vivo desde la sesión anterior para obtener información clara y útil sobre el rendimiento de su animal."),
+ P("XR5000","xr5000.jpg",0,"Rápida configuración y transferencia de datos con gran capacidad de almacenamiento y conectividad para revolucionar la forma de gestionar su ganado."),
+ P("Indicador electrónico X5","x5.jpg",0,"Solo peso y conteo. Acero inoxidable, display LED, comunicación RS232, batería recargable y adaptador de 8.5 V incluido, conteo de piezas, peakhold, kilogramos. Hasta 15.000 divisiones."),
+ P("Indicador electrónico X0","x0.jpg",0,"Solo peso. ABS con display LED rojo de 2.5 cm, RS232, batería recargable y cable de poder incorporado, kilogramos. Hasta 15.000 divisiones."),
+ P("Indicador electrónico X1","x1.jpg",0,"Solo peso. ABS con display LED rojo de 2.5 cm, RS232, batería recargable y cable de poder incorporado, kilogramos. Hasta 15.000 divisiones.")]}],
+energia:[
+ {t:"Paneles solares",s:"Soluciones sostenibles para el campo y la vivienda.",l:[100,150,200,350,400,410,550,600,700].map(function(w){return P("Panel solar "+w+"W","panelsolar.jpg",0,"")})},
+ {t:"Inversores",s:"",l:[["1000","inversor1000"],["1500","inversor1500"],["3000","inversor3000"],["6000","inversor6000"]].map(function(x){return P("Inversor "+x[0]+"W",x[1]+".jpg",0,"")}).concat([P("Inversor ongrid","inversor_ongrid.jpg",0,""),P("Batería de litio","bateria_litio.jpg",0,"")])}],
+accesorios:[{t:"Accesorios",s:"Todo lo que necesitas para tu sistema ganadero y eléctrico.",l:[
+ ["Aislador ovalado","aislador_ovalado"],["Aislador putilla","aislador_putilla"],["Aislador tornillo","aislador_tornillo"],["Aislador tortuga","aislador_tortuga"],["Aislador varilla","aislador_varilla"],["Alambre cobre 8","alambre_cobre_8"],["Cable aislador","cable_aislador"],["Cinta eléctrica","cinta_electrica"],["Cuchilla doble tiro","cuchilla_doble_tiro"],["Fusible impulsor","fusible_impulsor"],["Kit portillo","kit_portillo"],["Manguera aisladora","manguera_aisladora"],["Suiche sectorizador","suiche_sectorizador"],["Tensor galvanizado","tensor_galvanizado"],["Varillas Copperweld","varillas_copperweld"],["Inyector/Lector","inyector_lector"],["Lector ID largo","lector_id_largo"],["Lector ID corto","lector_id_corto"],["Chips ID","chips_id"],["Chapeta ID","chapeta_id"],["Regulador MPPT 30A","regulador_mppt_30a"],["Regulador de voltaje 110V","regulador_voltaje_110v"]
+ ].map(function(x){return P(x[0],x[1]+".jpg",0,"")})}],
+proyectos:[{t:"Proyectos",s:"Algunos de nuestros proyectos realizados.",l:["proyecto1","proyecto2","proyecto3","proyecto4","proyecto5","proyecto6","proyecto7","proyecto8","proyecto9","proyecto10","p20","proyecto25"].map(function(f,k){return P("Proyecto "+(k+1),f+".jpg",-1,"")})}]
+};
+var N={impulsores:"Impulsores",basculas:"Básculas ganaderas",energia:"Energía solar",accesorios:"Accesorios",proyectos:"Proyectos"};
+var cats=document.getElementById("cats"),out=document.getElementById("out");
+function money(v){return "$ "+v.toLocaleString("es-CO")}
+function show(k){
+  Array.prototype.forEach.call(cats.children,function(b){b.setAttribute("aria-pressed",b.dataset.k===k)});
+  out.innerHTML="";
+  D[k].forEach(function(g){
+    var h=document.createElement("h3");h.className="group";h.textContent=g.t;out.appendChild(h);
+    if(g.s){var p=document.createElement("p");p.className="sub";p.style.margin="0 0 16px";p.textContent=g.s;out.appendChild(p)}
+    var gr=document.createElement("div");gr.className="grid";
+    g.l.forEach(function(x){
+      var c=document.createElement("div");c.className="card";
+      var im=document.createElement("img");im.src=A+x.i;im.alt=x.n;im.loading="lazy";c.appendChild(im);
+      var b=document.createElement("div");b.className="b";
+      var t=document.createElement("h3");t.textContent=x.n;b.appendChild(t);
+      if(x.d){var d=document.createElement("p");d.textContent=x.d;b.appendChild(d)}
+      if(x.p>0){var pr=document.createElement("div");pr.className="price";pr.textContent=money(x.p);b.appendChild(pr)}
+      else if(x.p===0){var a=document.createElement("a");a.className="ask";a.target="_blank";a.rel="noopener";a.href="https://wa.me/573186615026?text="+encodeURIComponent("Hola, quiero cotizar: "+x.n);a.textContent="Cotizar por WhatsApp";b.appendChild(a)}
+      c.appendChild(b);gr.appendChild(c);
+    });
+    out.appendChild(gr);
+  });
+  out.scrollIntoView({behavior:"smooth",block:"start"});
+}
+Object.keys(N).forEach(function(k){var b=document.createElement("button");b.className="cat";b.type="button";b.dataset.k=k;b.textContent=N[k];b.setAttribute("aria-pressed","false");b.onclick=function(){show(k)};cats.appendChild(b)});
+// Video de fondo: forzar reproducción en móviles (iOS / ahorro de batería)
+(function(){var v=document.getElementById("hv");if(!v)return;v.muted=true;
+ function go(){var p=v.play();if(p&&p.catch)p.catch(function(){})}
+ go();document.addEventListener("touchstart",go,{once:true,passive:true});document.addEventListener("click",go,{once:true});
+ document.addEventListener("visibilitychange",function(){if(!document.hidden)go()});})();
+// Logo / nombre: volver al inicio y cerrar los productos
+document.getElementById("home").addEventListener("click",function(e){
+  e.preventDefault();
+  out.innerHTML="";
+  Array.prototype.forEach.call(cats.children,function(b){b.setAttribute("aria-pressed","false")});
+  window.scrollTo({top:0,behavior:"smooth"});
+});
+// Visor de imágenes
+var lb=document.getElementById("lb");
+out.addEventListener("click",function(e){if(e.target.tagName==="IMG"){lb.firstElementChild.src=e.target.src;lb.classList.add("on")}});
+lb.onclick=function(){lb.classList.remove("on")};
+// PQR
+var mp=document.getElementById("mp");
+document.getElementById("pqr").onclick=function(){mp.classList.add("on")};
+document.getElementById("cp").onclick=function(){mp.classList.remove("on")};
+mp.onclick=function(e){if(e.target===mp)mp.classList.remove("on")};
+try{emailjs.init("pupcclQqhYf-KM24b")}catch(e){}
+document.getElementById("fp").addEventListener("submit",function(e){
+  e.preventDefault();var f=this;
+  emailjs.sendForm("service_n33uhse","template_riyzq0d",f).then(function(){
+    mp.classList.remove("on");var t=document.getElementById("ts");t.style.display="flex";setTimeout(function(){t.style.display="none"},3500);f.reset();
+  },function(){alert("Error al enviar el mensaje. Intenta de nuevo.")});
+});
+</script>
+</body>
+</html>
